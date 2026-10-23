@@ -1,0 +1,16 @@
+{
+  "id": "o05",
+  "slug": "batch-ocr",
+  "name": "批量图片 OCR",
+  "version": "0.1.0",
+  "repo": "campfire-code/batch-ocr",
+  "license": "MIT",
+  "ui": {
+    "layout": "a",
+    "palette": "blue"
+  },
+  "upstream": {
+    "repo": "RapidAI/RapidOCR",
+    "license": "Apache-2.0"
+  }
+}
