@@ -3,6 +3,7 @@ import { ScanText as ScanTextAsIcon } from 'lucide-react';
 import type { BatchTool } from '../kit/types';
 import { baseName, excelRows, mergedText, safeName, type TextLine } from './core';
 import { writeXlsx } from './xlsx';
+import { ResultBody } from './Result';
 
 type Data = { name: string; lines: TextLine[] };
 const perImage = (p: Record<string, unknown>) => p.format === 'txt';
@@ -17,6 +18,7 @@ const tool: BatchTool = {
   mode: 'batch',
   resultView: 'list',
   concurrency: 1,
+  ResultBody,
   accept: { label: '图片', extensions: ['jpg', 'jpeg', 'png', 'webp', 'bmp', 'gif'] },
   params: [
     { key: 'format', label: '导出方式', type: 'select', options: [['xlsx', '汇总成一张 Excel'], ['txt', '每张图一个 TXT'], ['merged', '合并成一个 TXT']], default: 'xlsx' },
